@@ -16,3 +16,25 @@ Here’s a concise comparison between **Virtual Machines (VMs)** and **Container
 - Containers virtualize the **operating system**, sharing the host kernel for efficient resource usage and faster performance.
 
 In modern cloud-native applications, **containers** are preferred for scalability and lightweight resource management, while **VMs** are still widely used for running full operating systems or legacy applications.
+
+In Docker, an image is a lightweight, standalone, and executable package that includes everything needed to run a piece of software, including:
+
+The application code.
+Runtime libraries.
+System tools and utilities.
+System dependencies.
+Configuration files.
+
+
+Example Docker File
+FROM python:3.9-slim
+COPY app.py /app/
+WORKDIR /app
+RUN pip install flask
+CMD ["python", "app.py"]
+
+Image Build
+docker build -t my-python-app .
+
+Container Run
+docker run -d my-python-app
