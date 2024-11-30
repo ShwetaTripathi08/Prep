@@ -34,7 +34,7 @@ The Dietician Web Application is built on a scalable, cloud-based architecture t
 - **Purpose:** Handles data exchange between the frontend and backend, ensuring secure and efficient communication.  
 
 #### **Automation and Backend Logic:**  
-- **Technology:** Python  
+- **Technology:** Rest Assured ,Postman
 - **Purpose:** Used for automation tasks such as data transformation, API testing, and backend processing.  
 
 #### **Logging and Monitoring:**  
