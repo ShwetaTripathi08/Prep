@@ -1,37 +1,3 @@
----
-
-### 1. **APIs**
-Start by demystifying what an API is and its purpose:
-- "APIs (Application Programming Interfaces) allow two systems to communicate with each other.
-
----
-
-### 2. **Focus on REST APIs**
-- "REST APIs operate over HTTP and use standard methods like `GET`, `POST`, `PUT`, and `DELETE` to retrieve or manipulate data."
-
----
-
-### 3. **Introduce Tools for Practice**
-- **Postman**: "This tool allows you to send API requests without writing code. You can see how the request and response work, making it easier to understand APIs."
-
-
----
-
-
-### 5. **Discuss Authentication and Error Handling**
-Make sure to introduce:
-- **Authentication**: "Some APIs require keys or tokens to access. 
-- **Error Handling**: "Always check the status code of the response. For example, `200` means success, while `404` means the resource is not found."
-
----
-
-### 6. **Real-Life Example**
-Provide a relatable example:
-Frontend calls APIs to get data for the UI in JSON format.
-
----
-### 7. **Real-Life Example**
-Debugging APIs in postman 
 
 
 
