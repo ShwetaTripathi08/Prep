@@ -53,6 +53,7 @@ SELECT d.patient_id
 FROM diet_plans d
 LEFT JOIN patients p ON d.patient_id = p.patient_id
 WHERE p.patient_id IS NULL;
+
 Explanation:
 LEFT JOIN:
 Takes all rows from diet_plans and attempts to match each patient_id with a row in the patients table.
