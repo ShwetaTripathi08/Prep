@@ -46,14 +46,19 @@ HAVING COUNT(*) > 1;
 ### 3. **Checking Referential Integrity**
 If the database has foreign key relationships, you might want to check if all records in a child table have corresponding records in the parent table.
 
-```sql
-SELECT p.patient_id
-FROM patients p
-LEFT JOIN diet_plans d ON p.patient_id = d.patient_id
-WHERE d.patient_id IS NULL;
-```
+Query to Identify Orphaned Rows
+sql
 
-- **Purpose**: Identifies any `patient_id` in the `patients` table that doesn't have a corresponding entry in the `diet_plans` table, indicating referential integrity issues.
+SELECT d.patient_id
+FROM diet_plans d
+LEFT JOIN patients p ON d.patient_id = p.patient_id
+WHERE p.patient_id IS NULL;
+Explanation:
+LEFT JOIN:
+Takes all rows from diet_plans and attempts to match each patient_id with a row in the patients table.
+WHERE p.patient_id IS NULL:
+Filters out rows where there is no matching patient_id in the patients table.
+This query will return all patient_ids in diet_plans that do not have a corresponding record in patients. If this query returns any rows, it indicates a violation of referential integrity.
 
 ### 4. **Validating Data Ranges**
 For numerical data like age, weight, or calorie intake, it’s essential to ensure that the data falls within an expected range.
